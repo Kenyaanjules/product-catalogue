@@ -3,13 +3,20 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  
+  --color-ink: #171e31; /* page background */
+  --color-surface: #2d3250; /* cards and header */
+  --color-raised: #424769; /* inputs, borders, hover */
+  --color-muted: #676f9d; /* button outlines, subtle text on white */
+  --color-soft: #b9bedc; /* secondary text on dark */
+  --color-accent: #f9b17a; /* primary buttons, prices, links */
+  --color-accent-hover: #fbc59b;
+  --color-danger: #ff9d94; /* delete and error messages */
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+  @apply bg-ink text-white;
+  color-scheme: dark;
 }
