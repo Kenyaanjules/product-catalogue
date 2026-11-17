@@ -10,7 +10,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+    
   useEffect(() => {
     if (localStorage.getItem("token")) navigate("/", { replace: true });
   }, [navigate]);
@@ -22,7 +22,7 @@ export default function Login() {
       return;
     }
     localStorage.setItem("token", "dummy");
-    navigate("/");
+     navigate("/");
   }
 
   const input =
